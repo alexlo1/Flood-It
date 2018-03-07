@@ -1,0 +1,51 @@
+.piece {
+  width: 30px;
+  height: 30px;
+  border: 0px;
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+  border: 0px;
+}
+
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: lime;
+}
+.blue {
+  background-color: blue;
+}
+.purple {
+  background-color: purple;
+}
+.pink {
+  background-color: fuchsia;
+}
+
+#game-table {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  border-spacing: 0px;
+}
+#button-table {
+  border-spacing: 5px;
+  vertical-align: top;
+}
+#turn-counter {
+  font-size: 16;
+  font-family: serif;
+}
+#moves {
+
+}
+#max-moves {
+  
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+   	<title>Flood-It Game</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+   	<script src="flood.js" type="text/javascript"> </script>
+  </head>
+ 	<body>
+   		<h1>Flood-It Game</h1>
+		<table>
+      <tr>
+        <td valign="top">
+          <table>
+            <tr>
+              <td valign="top">
+                <table id="button-table">
+                  <tr>
+                    <td class="button red" onclick="flood ('red')"></td>
+                    <td class="button green" onclick="flood ('green')"></td>
+                    <td class="button blue" onclick="flood ('blue')"></td>
+                  </tr>
+                  <tr>
+                    <td class="button yellow" onclick="flood ('yellow')"></td>
+                    <td class="button pink" onclick="flood ('pink')"></td>
+                    <td class="button purple" onclick="flood ('purple')"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td id="turn-counter" valign="top">
+                Turn: <span id="moves">0</span>/<span id="max-moves">25</span>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td valign="top">
+                <input type="submit" value="New Game" onclick="newGame()">
+              </td>
+            </tr>
+            <tr valign="top">
+              <td valign="top">
+                <input type="submit" value="Help" onclick="help()">
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table id="game-table">
+            <tbody id="game-table-tbody">
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+	</body>
+</html>
