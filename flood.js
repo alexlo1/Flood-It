@@ -9,7 +9,7 @@ for(var row = 0; row < ROWS; row++) {
   }
 }
 var colors = "red yellow green blue purple pink".split(" ", 6);
-var moves;
+var moves = -1;
 var finished;
 
 function getElement(id) {
@@ -57,7 +57,7 @@ function floodNeighbors(row, col, color) {
   if(row < ROWS - 1) {
     colorFlood(row + 1, col, color);
   }
-  if(col> 0) {
+  if(col > 0) {
     colorFlood(row, col - 1, color);
   }
   if(col < COLS - 1) {
