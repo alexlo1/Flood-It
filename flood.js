@@ -65,6 +65,7 @@ function floodNeighbors(row, col, color) {
   }
 }
 
+// check if game over
 function allFlooded() {
   for(var row = 0; row < ROWS; row++) {
     for(var col = 0; col < COLS; col++) {
@@ -77,10 +78,12 @@ function allFlooded() {
 }
 
 function flood(color, initial=false) {
+  // do nothing if game ended
   if(finished) {
     return;
   }
 
+  // do nothing if color clicked is already the corner color
   var prevColor = table[0][0].color;
   if(!initial && color == prevColor) {
     return;
@@ -88,6 +91,7 @@ function flood(color, initial=false) {
   moves++;
   appendText(getElement("moves"), moves);
 
+  // change all currently flooded pieces
   for(var row = 0; row < ROWS; row++) {
     for(var col = 0; col < COLS; col++) {
       if(table[row][col].flooded) {
@@ -95,6 +99,7 @@ function flood(color, initial=false) {
       }
     }
   }
+  // flood all connected pieces
   for(var row = 0; row < ROWS; row++) {
     for(var col = 0; col < COLS; col++) {
       if(table[row][col].flooded) {
@@ -103,6 +108,7 @@ function flood(color, initial=false) {
     }
   }
 
+  // game is over
   if(allFlooded()) {
     finished = true;
     if(moves <= MAX_MOVES) {
@@ -115,18 +121,21 @@ function flood(color, initial=false) {
   }
 }
 
+// help button (instructions)
 function help() {
   alert("Click on the squares on the left to change the top left corner "+
         "to the color you choose. All tiles connected to it by the same "+
         "will also change to that color. Change all tiles to the same color "+
-        " to win the game!");
+        "to win the game!");
 }
 
+// pick a random color for each tile
 function randomColor() {
   var c = Math.floor(Math.random()*6);
   return colors[c];
 }
 
+// initialize and dynamically create the grid of color tiles
 function createTable() {
   moves = -1;
   finished = false;
@@ -148,6 +157,7 @@ function createTable() {
   appendText(getElement("max-moves"), MAX_MOVES);
 }
 
+// reset, new game
 function newGame() {
   clear(getElement("game-table-tbody"));
   createTable();
