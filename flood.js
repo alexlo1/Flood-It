@@ -116,7 +116,10 @@ function flood(color, initial=false) {
 }
 
 function help() {
-  alert("HELP");
+  alert("Click on the squares on the left to change the top left corner "+
+        "to the color you choose. All tiles connected to it by the same "+
+        "will also change to that color. Change all tiles to the same color "+
+        " to win the game!");
 }
 
 function randomColor() {
