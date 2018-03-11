@@ -153,12 +153,29 @@ function createTable() {
   }
   table[0][0].flooded = true;
   flood(table[0][0].color, true);
-  appendText(getElement("moves"), moves);
-  appendText(getElement("max-moves"), MAX_MOVES);
 }
 
 // reset, new game
-function newGame() {
+function newGame(size) {
+  if(size == 10) {
+    ROWS = COLS = 10;
+    MAX_MOVES = 17;
+  } else if (size == 14) {
+    ROWS = COLS = 14;
+    MAX_MOVES = 25;
+  } else if (size == 18) {
+    ROWS = COLS = 18;
+    MAX_MOVES = 32;
+  }
+  table = new Array(ROWS);
+  for(var row = 0; row < ROWS; row++) {
+    table[row] = new Array(COLS);
+    for(var col = 0; col < COLS; col++) {
+      table[row][col] = new Object();
+    }
+  }
+  appendText(getElement("moves"), moves);
+  appendText(getElement("max-moves"), MAX_MOVES);
   clear(getElement("game-table-tbody"));
   createTable();
 }

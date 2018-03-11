@@ -28,7 +28,7 @@ body {
   background-color: blue;
 }
 .purple {
-  background-color: purple;
+  background-color: blueviolet;
 }
 .pink {
   background-color: fuchsia;
@@ -45,12 +45,7 @@ body {
   vertical-align: top;
 }
 #turn-counter {
-  font-size: 16;
-  font-family: serif;
-}
-#moves {
-
-}
-#max-moves {
-
+  font-size: 18;
+  font-family: "Trebuchet MS", "Lucida Grande",
+  "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }

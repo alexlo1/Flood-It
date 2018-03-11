@@ -30,17 +30,27 @@
             </tr>
             <tr valign="top">
               <td id="turn-counter" valign="top">
-                Turn: <span id="moves">0</span>/<span id="max-moves">25</span>
+                Turn: <span id="moves"></span>/<span id="max-moves"></span>
               </td>
             </tr>
             <tr valign="top">
               <td valign="top">
-                <input type="submit" value="New Game" onclick="newGame()">
+                <input type="button" value="New 10x10" onclick="newGame(10)">
               </td>
             </tr>
             <tr valign="top">
               <td valign="top">
-                <input type="submit" value="Help" onclick="help()">
+                <input type="button" value="New 14x14" onclick="newGame(14)">
+              </td>
+            </tr>
+            <tr valign="top">
+              <td valign="top">
+                <input type="button" value="New 18x18" onclick="newGame(18)">
+              </td>
+            </tr>
+            <tr valign="top">
+              <td valign="top">
+                <input type="button" value="Help" onclick="help()">
               </td>
             </tr>
           </table>
