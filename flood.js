@@ -1,13 +1,7 @@
 var ROWS = 14;
 var COLS = 14;
 var MAX_MOVES = 25;
-var table = new Array(ROWS);
-for(var row = 0; row < ROWS; row++) {
-  table[row] = new Array(COLS);
-  for(var col = 0; col < COLS; col++) {
-    table[row][col] = new Object();
-  }
-}
+var table;
 var colors = "red yellow green blue purple pink".split(" ", 6);
 var moves = -1;
 var finished;
@@ -116,7 +110,7 @@ function flood(color, initial=false) {
     } else {
       alert("Finished, at last!");
     }
-  } else if(moves == max_moves) {
+  } else if(moves == MAX_MOVES) {
     alert("you lost.");
   }
 }
@@ -157,14 +151,12 @@ function createTable() {
 
 // reset, new game
 function newGame(size) {
+  ROWS = COLS = size;
   if(size == 10) {
-    ROWS = COLS = 10;
     MAX_MOVES = 17;
   } else if (size == 14) {
-    ROWS = COLS = 14;
     MAX_MOVES = 25;
   } else if (size == 18) {
-    ROWS = COLS = 18;
     MAX_MOVES = 32;
   }
   table = new Array(ROWS);
