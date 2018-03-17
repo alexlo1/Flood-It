@@ -16,6 +16,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 2px 2px 2px #222222;
+  padding: 3px 3px;
 }
 
 .red {
@@ -56,13 +57,15 @@ body {
 }
 
 input[type=button] {
+  width: 125px;
+  height: 40px;
   border: none;
   border-radius: 25px;
   background-color: cyan;
   color: black;
-  font-size: 16px;
-  padding: 8px 16px;
   margin: 4px 2px;
+  padding: 8px 4px;
+  font-size: 16px;
   cursor: pointer;
   box-shadow: 2px 2px 2px #222222;
 }
