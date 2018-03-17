@@ -6,6 +6,7 @@ var colors = "red yellow green blue purple pink".split(" ", 6);
 var moves = -1;
 var finished;
 
+// DOM functions
 function getElement(id) {
   var element = document.getElementById(id);
   return element;
@@ -29,11 +30,13 @@ function clear(element) {
   }
 }
 
+// change the color/class of a single element
 function floodElement(row, col, color) {
   table[row][col].color = color;
   table[row][col].element.className = "piece "+color;
 }
 
+// set the flooded tag to true if the color matches the color selected
 function colorFlood(row, col, color) {
   if(table[row][col].flooded) {
     return;
@@ -44,6 +47,7 @@ function colorFlood(row, col, color) {
   }
 }
 
+// check neighbors in all 4 directions
 function floodNeighbors(row, col, color) {
   if(row > 0) {
     colorFlood(row - 1, col, color);
@@ -111,13 +115,13 @@ function flood(color, initial=false) {
       alert("Finished, at last!");
     }
   } else if(moves == MAX_MOVES) {
-    alert("you lost.");
+    alert("You lost, but keep going!");
   }
 }
 
 // help button (instructions)
 function help() {
-  alert("Click on the squares on the left to change the top left corner "+
+  alert("Click on the buttons on the left to change the top left corner "+
         "to the color you choose. All tiles connected to it by the same "+
         "will also change to that color. Change all tiles to the same color "+
         "to win the game!");

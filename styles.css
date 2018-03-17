@@ -13,6 +13,9 @@ body {
   width: 30px;
   height: 30px;
   border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #222222;
 }
 
 .red {
@@ -39,6 +42,7 @@ body {
   border: 0px;
   padding: 0px;
   border-spacing: 0px;
+  box-shadow: 3px 3px 3px #222222;
 }
 #button-table {
   border-spacing: 5px;
@@ -48,4 +52,17 @@ body {
   font-size: 18;
   font-family: "Trebuchet MS", "Lucida Grande",
   "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  text-align: center;
+}
+
+input[type=button] {
+  border: none;
+  border-radius: 25px;
+  background-color: cyan;
+  color: black;
+  font-size: 16px;
+  padding: 8px 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #222222;
 }
