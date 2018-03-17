@@ -20,22 +20,22 @@ body {
 }
 
 .red {
-  background-color: red;
+  background-color: crimson;
 }
 .yellow {
-  background-color: yellow;
+  background-color: gold;
 }
 .green {
-  background-color: lime;
+  background-color: limegreen;
 }
 .blue {
-  background-color: blue;
+  background-color: dodgerblue;
 }
 .purple {
   background-color: blueviolet;
 }
 .pink {
-  background-color: fuchsia;
+  background-color: violet;
 }
 
 #game-table {
@@ -60,8 +60,8 @@ input[type=button] {
   width: 125px;
   height: 40px;
   border: none;
-  border-radius: 25px;
-  background-color: cyan;
+  border-radius: 15px;
+  background-color: skyblue;
   color: black;
   margin: 4px 2px;
   padding: 8px 4px;
