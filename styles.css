@@ -55,6 +55,9 @@ body {
   "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   text-align: center;
 }
+#left-table {
+  margin: 5px;
+}
 
 input[type=button] {
   width: 125px;
@@ -68,4 +71,8 @@ input[type=button] {
   font-size: 16px;
   cursor: pointer;
   box-shadow: 2px 2px 2px #222222;
+}
+
+input[type=button]:focus {
+    outline: none;
 }
